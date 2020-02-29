@@ -9,3 +9,11 @@ in the database (just a simple shared secret mechanism is currently implemented)
 
 ## dhost administration tool
 dhost.pl is the administration tool used for intializing the dhost database or adding new hosts and roles.
+
+# License
+dhost is Copyright 2020 by Stephen Cavilia
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
