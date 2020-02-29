@@ -80,7 +80,7 @@ sub dhost_host_run {
 	    my $reqaddr = $req->parameters->{addr};
 	    if ($reqaddr eq 'client')
 	    {
-		$addr = $req->address;
+		$addr = $req->env->{HTTP_X_FORWARDED_FOR} // $req->address;
 	    }
 	    else
 	    {
