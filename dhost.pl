@@ -26,7 +26,7 @@ sub gen_secret {
     my $secret;
     for (1..20)
     {
-	$secret .= substr($chars, irand(length $chars), 1);
+        $secret .= substr($chars, irand(length $chars), 1);
     }
     return $secret;
 }
@@ -40,13 +40,13 @@ sub cmd_add_role {
 
     unless (DHost::add_role($dhost_db, $rolename))
     {
-	print STDERR "Adding role $rolename failed\n";
-	return 1;
+        print STDERR "Adding role $rolename failed\n";
+        return 1;
     }
     unless (DHost::add_role_secret($dhost_db, $rolename, $secret))
     {
-	print STDERR "Adding secret to role $rolename failed\n";
-	return 1;
+        print STDERR "Adding secret to role $rolename failed\n";
+        return 1;
     }
 
     print "Added role $rolename\n";
@@ -108,6 +108,12 @@ sub cmd_set_host {
 	print STDERR "$ip is not a valid IPv4 or IPv6 address\n";
 	return 1;
     }
+}
+
+sub cmd_set_txt {
+    my ($host, $txt) = @_;
+
+    
 }
 
 sub cmd_get_host {
